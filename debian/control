@@ -1,0 +1,16 @@
+Source: libpam-trimspaces
+Section: admin
+Priority: extra
+Maintainer: Open Computing Facility <help@ocf.berkeley.edu>
+Build-Depends:
+ debhelper (>= 9),
+ libpam0g-dev,
+Standards-Version: 3.9.8
+Homepage: https://github.com/ocf/pam_trimspaces
+
+Package: libpam-trimspaces
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+Description: PAM module to strip spaces from usernames

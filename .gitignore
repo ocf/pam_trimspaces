@@ -1,0 +1,8 @@
+/debian/*.log
+/debian/*.substvars
+/debian/.debhelper
+/debian/debhelper-build-stamp
+/debian/files
+/debian/libpam-trimspaces
+/dist
+/pam_trimspaces.so
