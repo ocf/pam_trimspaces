@@ -19,7 +19,7 @@ Then add to your PAM config file:
 @@ -1,5 +1,8 @@
  #%PAM-1.0
 
-+# Strip whitespace from username
++# Strip leading and trailing whitespace from username
 +auth      requisite pam_trimspaces.so
 +
  # Block login if they are globally disabled
