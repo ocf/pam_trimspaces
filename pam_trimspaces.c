@@ -1,3 +1,4 @@
+#define PAM_SM_AUTH
 #include <security/pam_modules.h>
 #include <string.h>
 
@@ -37,5 +38,10 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, cons
         return PAM_AUTH_ERR;
     }
 
+    return PAM_SUCCESS;
+}
+
+
+PAM_EXTERN int pam_sm_setcred(pam_handle_t *pamh, int flags, int argc, const char **argv) {
     return PAM_SUCCESS;
 }
