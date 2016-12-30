@@ -1,0 +1,5 @@
+libpam-trimspaces (1.0.0ocf1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Chris Kuehl <ckuehl@ocf.berkeley.edu>  Tue, 27 Dec 2016 13:02:37 -0800
