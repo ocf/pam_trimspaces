@@ -1,3 +1,9 @@
+libpam-trimspaces (1.0.1ocf1) unstable; urgency=medium
+
+  * Fix handling of null usernames
+
+ -- Chris Kuehl <ckuehl@ocf.berkeley.edu>  Fri, 30 Dec 2016 07:51:29 -0800
+
 libpam-trimspaces (1.0.0ocf1) unstable; urgency=medium
 
   * Initial release.
