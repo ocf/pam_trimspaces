@@ -12,6 +12,10 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc, cons
         return PAM_AUTH_ERR;
     }
 
+    if (user == NULL) {
+        return PAM_SUCCESS;
+    }
+
     size_t len = strlen(user);
     char copy[len + 1];
     char *new_user = copy;
