@@ -34,7 +34,7 @@ for (def i = 0; i < dists.size(); i++) {
             [$class: 'StringParameterValue', name: 'path_to_changes', value: "dist_${dist}/*.change"],
             [$class: 'StringParameterValue', name: 'dist', value: dist],
             [$class: 'StringParameterValue', name: 'job', value: env.JOB_NAME.replace('/', '/job/')],
-            [$class: 'StringParameterValue', name: 'build_number', value: env.BUILD_NUMBER],
+            [$class: 'StringParameterValue', name: 'job_build_number', value: env.BUILD_NUMBER],
         ]
     }
 }
