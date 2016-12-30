@@ -1,5 +1,7 @@
 #!/bin/bash
 set -euxo pipefail
+dist="$1"
+
 cp -r /mnt /work
 cd /work
 
@@ -7,6 +9,8 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get -y install --no-install-recommends build-essential devscripts equivs
 mk-build-deps -i --tool 'apt-get --no-install-recommends -y'
+
+VISUAL=touch dch --local "~$dist"
 debuild -us -uc -sa
 
 install -o "$DIST_UID" -g "$DIST_GID" ../{*.changes,*.deb,*.dsc,*.tar.*} /mnt/dist/
