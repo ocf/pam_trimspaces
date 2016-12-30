@@ -13,4 +13,5 @@ mk-build-deps -i --tool 'apt-get --no-install-recommends -y'
 VISUAL=touch dch --local "~$dist"
 debuild -us -uc -sa
 
+shopt -s nullglob
 install -o "$DIST_UID" -g "$DIST_GID" ../{*.changes,*.deb,*.dsc,*.tar.*,*.buildinfo} /mnt/dist/
