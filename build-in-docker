@@ -1,6 +1,20 @@
 #!/bin/bash
 set -euxo pipefail
-dist="$1"
+
+case "$1" in
+    stretch)
+        debver=9
+        ;;
+    jessie)
+        debver=8
+        ;;
+    *)
+        set +x
+        echo "$0: I don't know what Debian version number '$1' has." >&2
+        echo "Please edit this script to teach me about it." >&2
+        exit 1
+        ;;
+esac
 
 cp -r /mnt /work
 cd /work
@@ -10,7 +24,7 @@ apt-get update
 apt-get -y install --no-install-recommends build-essential devscripts equivs
 mk-build-deps -i --tool 'apt-get --no-install-recommends -y'
 
-VISUAL=touch dch --local "~$dist"
+VISUAL=touch dch --local "~deb${debver}u"
 debuild -us -uc -sa
 
 shopt -s nullglob
