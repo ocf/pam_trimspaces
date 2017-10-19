@@ -43,7 +43,7 @@ your name via SSH).
 * Run `package_{dist}`, e.g. `package_stretch`.
 
 
-## Building the Debian package locally
+### Building the Debian package locally
 
 * Use the regular packaging commands to get the desired output. For example, to
   build only a binary package and skip signing, try `debuild -us -uc -b`.
