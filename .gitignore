@@ -4,5 +4,5 @@
 /debian/debhelper-build-stamp
 /debian/files
 /debian/libpam-trimspaces
-/dist
+/dist*
 /pam_trimspaces.so
