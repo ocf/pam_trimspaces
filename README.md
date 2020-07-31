@@ -1,6 +1,6 @@
 # pam_trimspaces
 
-[![Build Status](https://jenkins.ocf.berkeley.edu/buildStatus/icon?job=pam_trimspaces/master)](https://jenkins.ocf.berkeley.edu/job/pam_trimspaces/job/master/)
+[![Build Status](https://jenkins.ocf.berkeley.edu/buildStatus/icon?job=ocf/pam_trimspaces/master)](https://jenkins.ocf.berkeley.edu/job/ocf/job/pam_trimspaces/job/master/)
 
 PAM module to trim spaces on both sides of the username. This is useful
 especially in login GUIs used by the general computer-illiterate public.
